@@ -38,7 +38,7 @@ digit bits = pictures $ zipWith led (convert bits) segments
 
 displayDigits :: [Bit] -> [Bit] -> [Bit] -> IO ()
 displayDigits d1 d2 d3 =
-    display (InWindow "Segment LED" (600, 360) (0, 0)) white $ pictures $
+    display (InWindow "Segment LED" (620, 360) (0, 0)) white $ pictures $
         [ translate (-200) 0 $ digit d1
         , digit d2
         , translate 200 0 $ digit d3 ]
