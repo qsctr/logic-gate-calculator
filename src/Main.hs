@@ -18,7 +18,7 @@ main = do
         sum = xBits + yBits
         diff = xBits - yBits
         prod = xBits * yBits
-    putStrLn $ "sum = " ++ bitsToHex sum
-    putStrLn $ "difference = " ++ bitsToHex diff
-    putStrLn $ "product = " ++ bitsToHex prod
+    putStrLn $ "x + y = " ++ bitsToHex sum
+    putStrLn $ "x - y = " ++ bitsToHex diff
+    putStrLn $ "x * y = " ++ bitsToHex prod
     displayDigits sum diff prod
