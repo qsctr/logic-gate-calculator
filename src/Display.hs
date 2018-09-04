@@ -6,12 +6,16 @@ import Prelude hiding ((&&), (||), not)
 
 convert :: [Bit] -> [Bit]
 convert [a, b, c, d] =
-    [ not b && not d || not a && c || b && c || a && not d || not a && b && d || a && not b && not c
-    , not b && not d || not b && not c || not a && not c && not d || a && not c && d || not a && c && d
+    [ not b && not d || not a && c || b && c || a && not d || not a && b && d
+        || a && not b && not c
+    , not b && not d || not b && not c || not a && not c && not d
+        || a && not c && d || not a && c && d
     , a && not b || not c && d || not b && not c || not a && d || not a && b
-    , not a && not b && not d || not b && c && d || b && not c && d || a && b && not c || a && not c && not d || b && c && not d
+    , not a && not b && not d || not b && c && d || b && not c && d
+        || a && b && not c || a && not c && not d || b && c && not d
     , not b && not d || a && b || c && not d || a && c
-    , not c && not d || a && not b || b && not d || a && c || not a && b && not c
+    , not c && not d || a && not b || b && not d || a && c
+        || not a && b && not c
     , a && not b || c && not d || a && d || not a && b && not c || not b && c ]
 
 segments :: [Picture]
