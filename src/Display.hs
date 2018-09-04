@@ -19,12 +19,12 @@ convert [a, b, c, d] =
 segments :: [Picture]
 segments =
     [ translate 0 160 horizontal
-    , translate (-80) 80 vertical
     , translate 80 80 vertical
-    , horizontal
-    , translate (-80) (-80) vertical
     , translate 80 (-80) vertical
-    , translate 0 (-160) horizontal ]
+    , translate 0 (-160) horizontal
+    , translate (-80) (-80) vertical
+    , translate (-80) 80 vertical
+    , horizontal ]
   where horizontal = polygon
             [(-80, 0), (-70, 10), (70, 10), (80, 0), (70, -10), (-70, -10)]
         vertical = rotate 90 horizontal
